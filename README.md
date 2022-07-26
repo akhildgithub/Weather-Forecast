@@ -1,1 +1,1 @@
-https://akhildgithub.github.io/weather1/
+https://akhildgithub.github.io/Weather-Forecast/
