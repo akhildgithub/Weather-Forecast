@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>WEATHER FORECAST</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>  
+  <script src="https://kit.fontawesome.com/f4d67ec424.js" crossorigin="anonymous"></script>
+<style>
+
+  p.sharebtn {
+color: black;
+font-family:calibri;
+padding: 0px;
+margin: 0px;
+font-size: 25px;
+border: none;
+cursor: pointer;
+display: inline; 
+}
+
+.sharedown {
+position: relative;
+display: inline-block; 
+margin-left:5%; 
+margin-top: 11px;
+}
+
+#mySharedown{
+display: none;
+position: absolute;
+background-color: white;
+width:850px;
+height:100vh;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+overflow-y: scroll;
+padding-left: 20px;
+padding-right: 10px;
+margin-left: -800px;
+margin-top: -60px;
+padding-top: 15px;
+}
+#mySharedown span{
+  font-size: 20px;
+  font-weight: bold;
+}
+#mySharedown.show {
+  display: block;
+}
+#mySharedown p{
+  font-size: 20px;
+  font-weight: 100;
+}
+#mySharedown::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: gray;  
+}
+::-webkit-scrollbar-track {
+background: white;
+border-radius: 10px;
+}
+body{
+  overflow-x: hidden;
+}
+</style>
+</head>
+<body>
+  
+
+  <div class="locate">
+  <header class="head1" style="font-weight: bold;">
+    <p class="info-txt"></p>
+    <div class="content" >
+     <span class="app">Weather App</span>
+     <span class="loc1"><form ><input class="loc2" placeholder="Search City or Pincode" type="text"></form></span>
+     <a href="home.html" class="get1" >Get Device Location</a> 
+    
+     <div class="sharedown">     
+      <p onclick="shareVis()" class="sharebtn" >&nbsp About</p>
+      <div id="mySharedown" class="sharedown-content">
+        <p>This weather app is one of best free weather apps with full features: Local weather, weather map and weather widgets.</p>
+        <p><span>Forecast : </span> Forecast now, hourly forecast and daily forecast app</p>
+        <p><span>Weather map : </span> Rain/snow, temperature, pressure, windy, clouds, humidity, waves.</p><br>
+        
+        <p>Its so easy to receive the weather conditions in your current location.</p>
+        <p>Weather forecast app provides detailed local forecast & weather forecast world wide, the app provides the current temperature in Celsius.</p>
+        <p>The weather app also provides atmospheric pressure, weather conditions, relative humidity and wind speed, in addition to one week in future and hourly weather forecast.</p>
+        <p>Realtime temperature, humidity, pressure and wind speed are all in the weather app based.</p>
+        <br>
+        <span>Great features:</span>
+        <p>- The weather channel: temperature, wind, humidity, atmosphere pressure, water, storm, stormshield, rain alert in one wetter app</p>
+        <p>- Hourly or daily prediction: we offer 7 days info, the weather now, hourly weather free in each hour, today’s weather, tomorrow’s weather</p>
+        <p>- Animated weather conditions with live weather images</p>
+        <p>- Hourly and weekly forecastle, especially hourly weather item for next 7 days.</p>
+        <p>- World weather report: we provide worldwide weather forecast</p>
+        <p>- Storm warning: Storm tracker, tornado warning and rain alarm </p>
+        <p>- Reporting: the weather news can show up everyday if you enable it.</p>
+        <p>- Wind guru tool: wind forecast by wind speed meter, wind finder</p>
+        <p>- 1 day, 7 days future prediction with accurate el tiempo, plus tempo data for future hourly weather</p>
+        <p>- Weather widget (weather on homescreen) and ongoing notification with forecast bar, multiple place on widgets.</p>
+        <p>- Auto reload data for notification even app is in underground</p>
+        <p>- Weather notification bar: Keeps weather running underground for realtime, you can see the temperature on android system bar without opening app</p>
+        <p>- Lock screen with info: temps, rain, clouds & clock widget weather</p>
+        <p>- Track the whether in multiple locations</p>
+        <p>- Great wether radar with animated maps</p>
+      </div> 
+  </div>
+
+    </div>
+  </header>    
+  
+  <div class="report1">
+    <br><br>
+    <div class="today1"><div class="today11">
+     <div class="city1">
+        <span class="place">Warangal, IN </span>
+        <span >as of </span>
+        <span class="hour1">12</span> : 
+        <span class="minute1">22 </span> on 
+        <span class="month1"> July</span>
+        <span class="date1">12</span>
+      </div><br>
+      <span class="temp1"><span>25</span>&deg;</span><br><br><br>
+      <span class="rep1" style="text-transform:capitalize;">Cloudy</span><br>        
+      <img class="cloud" src="rain.svg"><br> 
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <div class="one10">
+    <div class="one">
+      <div class="fore5">
+      <h1 class="fore3">Today's Weather </h1></div>
+      <div >
+        <h4 id="left1" class="day1">Maximum </h4><br>
+        <h4 id="right1" <span class="day2">22</span>&deg;</h4>
+        <h4 id="left1">Minimum </h4><br>
+        <h4 id="right1" <span class="night2">22</span>&deg;</h4>
+        <h4 id="left1"> Morning</h4><br>
+        <h4 id="right1"> <span class="morning">22</span>&deg;</h4>
+        <h4 id="left1"> Afternoon</h4><br>
+        <h4 id="right1"><span class="afternoon">22</span>&deg;</h4>
+        <h4 id="left1"> Evening</h4><br>
+        <h4 id="right1"> <span class="evening">22</span>&deg;</h4>
+        <h4 id="left1"> Night</h4><br>
+        <h4 id="right1"> <span class="night">22</span>&deg;</h4>
+      </div>
+    </div>
+    <div class="two">
+      <div class="fore5">
+      <h1 class="fore3">Current Weather </h1>
+    </div>
+    <div>
+      <h4 id="left2"> Feels Like</h4>
+      <h4 id="right2"> <span class="high">22</span>&deg;</h4>
+      <h4 id="left2"> Humidity</h4>
+      <h4 id="right2"><span class="humid">88 </span> %</h4>
+      <h4 id="left2"> Pressure</h4>
+      <h4 id="right2"> <span class="press">1000</span> hPa</h4>
+      <h4 id="left2"> Wind Speed</h4>
+      <h4 id="right2"> <span class="speed12">5.3</span> km/h</h4>
+      <h4 id="left2">Dew Point</h4>
+      <h4 id="right2"><span class="dewp">12.4</span>&deg;</h4>
+      <h4 id="left2"> UV Index</h4>
+      <h4 id="right2"> <span class="uv">2.1</span></h4>
+      <h4 id="left2"> Sun Rise</h4>
+      <h4 id="right2"> <span class="sunrise">2.1</span></h4>
+      <h4 id="left2"> Sun set</h4>
+      <h4 id="right2"> <span class="sunset">2.1</span></h4>
+    </div>
+  </div>
+  <div class="three">
+    <div class="fore5">
+      <h1 class="fore3">Hourly Forecast</h1>
+    </div>
+    <div >
+      <h4 id="left3"><span class="now">10</span>:00</h4>
+      <h4 id="right3"><span id="now">22</span>&deg;</h4>
+    </div>
+    <div>
+      <h4 id="left3"><span class="now1">10</span>:00</h4>
+      <h4 id="right3"><span id="now1">22</span>&deg;</h4>
+     </div>
+     <div >
+      <h4 id="left3"><span class="now2">10</span>:00</h4>
+      <h4 id="right3"><span id="now2">22</span>&deg;</h4>
+    </div>
+    <div >
+      <h4 id="left3" ><span class="now3">10</span>:00</h4>
+      <h4 id="right3"><span id="now3">22</span>&deg;</h4>
+    </div>
+    <div >
+      <h4 id="left3" ><span class="now4">10</span>:00</h4>
+      <h4 id="right3"><span id="now4">22</span>&deg;</h4>
+    </div>
+    <div >
+      <h4 id="left3" ><span class="now5">10</span>:00</h4>
+      <h4 id="right3"><span id="now5">22</span>&deg;</h4>
+    </div>
+    <div >
+      <h4 id="left3" ><span class="now6">10</span>:00</h4>
+      <h4 id="right3"><span id="now6">22</span>&deg;</h4>
+    </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="hourly1"><div class="fore4">
+    <h1>7-day Weather Forecast</h1>
+  </div>
+  <div id="main2">
+    <div style="border-right:solid 1px gray">
+      <h2 id="top">Today</h2>
+      <h1 id="bottom5"><span>25</span>&deg;</h1>
+      <h3 id="bot5"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds5">60</span>%</h3>
+    </div>
+    <div style="border-right:solid 1px gray">
+      <h2 id="top"><span class="date2">02</span>/07</h2>
+      <h1 id="bottom6"><span>22</span>&deg;</h1>
+      <h3 id="bot6"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds6">60</span>%</h3>
+    </div>
+    <div style="border-right:solid 1px gray;">
+      <h2 id="top"><span class="date3">03</span>/07</h2>
+      <h1 id="bottom7"><span>22</span>&deg;</h1>
+      <h3 id="bot7"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds7">60</span>%</h3>
+    </div>
+    <div style="border-right:solid 1px gray">
+      <h2 id="top" ><span class="date4">04</span>/07</h2>
+      <h1 id="bottom8"><span>22</span>&deg;</h1>
+      <h3 id="bot8"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds8">60</span>%</h3>
+    </div>
+    <div style="border-right:solid 1px gray">
+      <h2 id="top" ><span class="date5">04</span>/07</h2>
+      <h1 id="bottom9"><span>22</span>&deg;</h1>
+      <h3 id="bot9"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds9">60</span>%</h3>
+    </div>
+    <div style="border-right:solid 1px gray">
+      <h2 id="top" ><span class="date6">04</span>/07</h2>
+      <h1 id="bottom10"><span>22</span>&deg;</h1>
+      <h3 id="bot10"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds10">60</span>%</h3>
+    </div>
+    <div >
+      <h2 id="top"><span class="date7">05</span>/07</h2>
+      <h1 id="bottom11"><span>22</span>&deg;</h1>
+      <h3 id="bot11"><span>25</span>&deg;</h3>
+      <img class="clouds1" src="rain.svg">
+      <h3 class="clouds2"><span class="clouds11">60</span>%</h3>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+  <br>
+  <br>
+  <br>
+<div class="design">
+  <span>Designed and Developed by Dharavath Akhil</span>
+</div>
+  
+  
+</body>
+<script src="home.js"></script>
+<script>
+function shareVis() {
+  //document.getElementById("mySharedown").className = "sharedown-content show";
+  document.getElementById("mySharedown").classList.add("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.sharebtn')) {
+
+      var sharedowns = document.getElementsByClassName("sharedown-content");
+      var i;
+      for (i = 0; i < sharedowns.length; i++) {
+          var openSharedown = sharedowns[i];
+          if (openSharedown.classList.contains('show')) {
+              openSharedown.classList.remove('show');
+          }
+      }
+  }
+}
+
+document.getElementById("mySharedown").addEventListener('click',function(event){
+  event.stopPropagation();
+});
+</script>
+</html>
